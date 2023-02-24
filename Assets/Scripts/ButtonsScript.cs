@@ -47,7 +47,7 @@ public class ButtonsScript : MonoBehaviour
             switcher[1] = false;
         }
     }
-    public void DifficultyButton()
+    public void EasyButton()
     {
 
     }
