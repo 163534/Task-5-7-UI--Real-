@@ -56,11 +56,7 @@ public class ButtonsScript : MonoBehaviour
             menus[2].SetActive(false);
             menus[0].SetActive(true);
         }
-        if (switcher[2])
-        {
-            menus[2].SetActive(false);
-            menus[0].SetActive(true);
-        }
+        
     }
     public void QuitButton()
     {
