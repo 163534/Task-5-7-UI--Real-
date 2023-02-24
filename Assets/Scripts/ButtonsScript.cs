@@ -12,7 +12,14 @@ public class ButtonsScript : MonoBehaviour
     {
         menus[0].SetActive(false);
         menus[3].SetActive(true);
-        
+        if (menus[3].activeInHierarchy)
+        {
+            switcher[2] = true;
+        }
+        else
+        {
+            switcher[2] = false;
+        }
     }
     public void OptionsButton()
     {
@@ -54,6 +61,11 @@ public class ButtonsScript : MonoBehaviour
         if (switcher[1])
         {
             menus[2].SetActive(false);
+            menus[0].SetActive(true);
+        }
+        if (switcher[2])
+        {
+            menus[3].SetActive(false);
             menus[0].SetActive(true);
         }
         
