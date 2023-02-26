@@ -8,6 +8,7 @@ public class ButtonsScript : MonoBehaviour
     public GameObject[] menus; // 0 = main menu, 1 = Options menu, 2 = Instructions menu, 3 = Difficulty menu 
     public bool[] switcher; // Used to detect current menu for the back button
     
+    
     public void StartButton()
     {
         menus[0].SetActive(false);
@@ -20,6 +21,7 @@ public class ButtonsScript : MonoBehaviour
         {
             switcher[2] = false;
         }
+        AudioManager.instance.PlaySFX("Click");
     }
     public void OptionsButton()
     {
@@ -33,6 +35,7 @@ public class ButtonsScript : MonoBehaviour
         {
             switcher[0] = false;
         }
+        AudioManager.instance.PlaySFX("Click");
     }
     public void InstructionsButton()
     {
@@ -46,10 +49,7 @@ public class ButtonsScript : MonoBehaviour
         {
             switcher[1] = false;
         }
-    }
-    public void EasyButton()
-    {
-
+        AudioManager.instance.PlaySFX("Click");
     }
     public void BackButton()
     {
@@ -68,10 +68,10 @@ public class ButtonsScript : MonoBehaviour
             menus[3].SetActive(false);
             menus[0].SetActive(true);
         }
-        
+        AudioManager.instance.PlaySFX("Click");
     }
     public void QuitButton()
-    {
+    {        
         Application.Quit();
     }
 }
