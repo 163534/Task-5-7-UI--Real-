@@ -12,14 +12,14 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         // Singleton //
-        if(instance == null) // if there is no instance of the audio manager
+        if(instance == null) // If there is no instance of the audio manager
         {
-            instance = this; // then this becomes the instance
-            DontDestroyOnLoad(gameObject); // don't destroy the audio manager when changing scenes
+            instance = this; // Then this class (AudioManager) becomes the instance
+            DontDestroyOnLoad(gameObject); // Don't destroy the AudioManager when changing scenes
         }
         else
         {
-            Destroy(gameObject); // if an instance already exists then destroy this instance
+            Destroy(gameObject); // If an instance already exists then destroy this instance
         }
         
     }
