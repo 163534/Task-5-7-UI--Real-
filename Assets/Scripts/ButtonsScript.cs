@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonsScript : MonoBehaviour
 {
@@ -69,6 +70,16 @@ public class ButtonsScript : MonoBehaviour
             menus[0].SetActive(true);
         }
         AudioManager.instance.PlaySFX("Click");
+    }
+    public void DifficultyButton()
+    {
+        AudioManager.instance.PlaySFX("Scream");
+        SceneManager.LoadScene(1);
+    }
+    public void BackGameButton()
+    {
+        
+        SceneManager.LoadScene(0);
     }
     public void QuitButton()
     {        
