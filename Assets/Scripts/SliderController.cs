@@ -8,13 +8,8 @@ public class SliderController : MonoBehaviour
     public Slider musicSlider, sfxSlider;
     private void Awake()
     {
-        
-    }
-
-    private void Start()
-    {
         print("sliders activated");
-        float mVol= 0.5f;
+        float mVol = 0.5f;
         float sVol = 0.5f;
         if (PlayerPrefs.HasKey("musicVol"))
         {
@@ -35,6 +30,32 @@ public class SliderController : MonoBehaviour
             print("sfx key not found");
         }
         sfxSlider.value = sVol;
+    }
+
+    private void Start()
+    {
+       /* print("sliders activated");
+        float mVol= 0.5f;
+        float sVol = 0.5f;
+        if (PlayerPrefs.HasKey("musicVol"))
+        {
+            mVol = PlayerPrefs.GetFloat("musicVol");
+        }
+        else
+        {
+            print("music key not found");
+        }
+        musicSlider.value = mVol;
+
+        if (PlayerPrefs.HasKey("sfxVol"))
+        {
+            sVol = PlayerPrefs.GetFloat("sfxVol");
+        }
+        else
+        {
+            print("sfx key not found");
+        }
+        sfxSlider.value = sVol; */
 
     }
     public void ToggleMusic()
